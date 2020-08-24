@@ -42,9 +42,10 @@ class HomeViewController: UIViewController {
        AppManager.shared.logout()
     }
 }
-// MARK: - Collection view delegate & data source methods
+
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    // MARK: - Collection view delegate & data source methods
     func reloadCollectionView() {
         DispatchQueue.main.async {
             self.lblEmptyMessage.isHidden = !self.arrHomeMenuItem.isEmpty
